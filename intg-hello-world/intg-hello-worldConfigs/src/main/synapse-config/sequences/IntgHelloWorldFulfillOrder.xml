@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="IntgHelloWorldFulfillOrder" trace="disable" xmlns="http://ws.apache.org/ns/synapse"/>
+<sequence name="IntgHelloWorldFulfillOrder" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property description="orderId" name="orderId" scope="default" type="STRING" value="SOI7656401"/>
+    <helloWorld.sample_template>
+        <orderId>{$ctx:orderId}</orderId>
+    </helloWorld.sample_template>
+</sequence>
